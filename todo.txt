@@ -1,0 +1,56 @@
+Antecedant médicale
+but:
+Créer modèle classification prediction grace au symptome 
+le modèle sort
+
+todo 1
+CRUD patient
+
+Finalité: asocier @ QR code chaque patient, 
+url + id=... à asocier avec QR code
+ne pas mettre dans une répertoire
+créer un programme qui regarde dans la table patient si y a pas de QR créer et à mettre les QR(jpeg) dans un répertoire
+répertoire docu rattché à une patient ajouté convention
+id=chemin qr code du patient
+cdn= content delivery network
+
+php reçoit url qui utilise api endpoint et retourne json
+
+programme autonome (main): peux se connecter, fait le select*, generer qrcode, ne pas faire en dur en dur, utiliser un repository spring
+information générer qrcode qu'on fait en jpeg
+
+Back end: PatientController avec le CRUD
+	- getAll() annoter [API] -> rend du json
+
+	Autonome: récupère tout les patients: pour chaque patient générer qrcode et le sauvegarde
+		-> appel api/ getAll() ustile httpservlet
+		
+Dans un qrcode (dans une variable) localhost:77/patient/9 vas dans @ php
+
+todo 2
+Créer branche nouveau branche :
+- créer programme autonome main
+- main peux se connecte : select * patient
+- ça generer qr code par rapport url : 
+- il y a ensuite jpeg -> à mettre dans un cdn 
+- url qr code se pointe vers le php pas qr code.
+
+////////////////////
+- creer methode :
+    ex : getall annotee en api
+- autonome :
+    - qui recupere tout les patients, pour chaque patient il generer qr code et sauvegarde
+    - recuperer : 
+        - il appelle tout de suite api getall
+
+    exemple: 
+        /usr/loca/cdn/patient/../image=.jpeg
+
+info dans qr code :
+    - /localhost:77/patient/[id]
+créer dossier = avec idsous repertoire = contient photo et info à propos du patient
+
+Content Delivery Network : 
+- servir photo ou quelque chose statique pas forcèmentt dans site de assets 
+- repliquer partout dans le monde 
+- peux faire en cache

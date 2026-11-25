@@ -1,0 +1,47 @@
+gestion-patient/
+│
+├── .mvn/
+│   └── wrapper/
+│
+├── src/
+│   │
+│   ├── main/
+│   │   │
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   │           └── gestion_patient/
+│   │   │               │
+│   │   │               ├── GestionPatientApplication.java
+│   │   │               │
+│   │   │               ├── controller/
+│   │   │               │   └── PatientController.java
+│   │   │               │
+│   │   │               ├── entity/
+│   │   │               │   └── Patient.java
+│   │   │               │
+│   │   │               ├── repository/
+│   │   │               │   └── PatientRepository.java
+│   │   │               │
+│   │   │               ├── service/
+│   │   │               │   └── PatientService.java
+│   │   │               │
+│   │   │               └── dto/
+│   │   │                   └── PatientDTO.java
+│   │   │
+│   │   └── resources/
+│   │       ├── application.properties
+│   │       ├── static/
+│   │       └── templates/
+│   │
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── example/
+│                   └── gestion_patient/
+│                       └── GestionPatientApplicationTests.java
+│
+├── .gitignore
+├── mvnw
+├── mvnw.cmd
+└── pom.xml

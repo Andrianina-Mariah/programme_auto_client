@@ -1,0 +1,44 @@
+A. Ajouter un patient (POST)
+curl -X POST http://localhost:8080/api/patients \
+-H "Content-Type: application/json" \
+-d '{
+  "nom": "Rakoto",
+  "prenom": "Jean",
+  "dateNaissance": "2000-05-15",
+  "sexe": "Masculin",
+  "telephone": "0341234567",
+  "email": "jean@gmail.com"
+}'
+
+B. Récupérer tous les patients (GET)
+curl http://localhost:8080/api/patients
+
+C. Récupérer un patient par ID (GET)
+curl http://localhost:8080/api/patients/1
+
+D. Modifier un patient (PUT)
+curl -X PUT http://localhost:8080/api/patients/4 \
+-H "Content-Type: application/json" \
+-d '{
+  "nom": "Rakoto",
+  "prenom": "Jean Pierre",
+  "dateNaissance": "2000-05-15",
+  "sexe": "Masculin",
+  "telephone": "0347654321",
+  "email": "jeanpierre@gmail.com"
+}'
+
+E. Supprimer un patient (DELETE)
+curl -i -X DELETE http://localhost:8080/api/patients/5
+
+curl -i http://localhost:8080/api/patients/999
+curl -i http://localhost:8080/api/inconnue
+
+ceci crée une nouvelle colonne dans patient et met juste null sur les données manquantes
+curl -i -X POST http://localhost:8080/api/patients \
+-H "Content-Type: application/json" \
+-d '{
+  "nom": "",
+  "prenom": "Jean",
+  "email": "emailincorrect"
+}'
