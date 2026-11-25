@@ -45,3 +45,29 @@ gestion-patient/
 ├── mvnw
 ├── mvnw.cmd
 └── pom.xml
+
+qr-client/
+│
+├── pom.xml
+├── .gitignore
+│
+└── src/
+    └── main/
+        ├── java/
+        │   └── com/
+        │       └── example/
+        │           └── client/
+        │               │
+        │               ├── Main.java
+        │               │
+        │               ├── api/
+        │               │   └── PatientApiClient.java
+        │               │
+        │               ├── model/
+        │               │   └── Patient.java
+        │               │
+        │               └── qr/
+        │                   └── QrCodeGenerator.java
+        │
+        └── resources/
+            └── application.properties

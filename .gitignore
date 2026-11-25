@@ -1,0 +1,27 @@
+
+# Maven : fichiers générés
+**/target/
+
+# Java
+*.class
+*.log
+
+# IDE
+**/.idea/
+**/.vscode/
+*.iml
+.classpath
+.project
+.settings/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers locaux et secrets
+.env
+**/application-local.properties
+
+# QR codes générés localement
+qr-output/
+generated-qr/

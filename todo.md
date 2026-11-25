@@ -88,30 +88,42 @@ Créer une application Spring Boot permettant de gérer les patients, puis déve
 
 ### 3.1. Préparation du projet
 
-- [ ] Créer une nouvelle branche Git : `sprint-1-qrcode`.
-- [ ] Créer un projet Java autonome avec Maven.
-- [ ] Ajouter les dépendances nécessaires :
+- [X] Créer une nouvelle branche Git : `sprint-1-qrcode`.
+- [X] Créer un projet Java autonome avec Maven.
+
+mvn archetype:generate -DgroupId=com.example.client -DartifactId=qr-client -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+- [X] Ajouter les dépendances nécessaires :
   - Client HTTP Java pour appeler l'API.
   - Jackson pour lire le JSON.
   - ZXing pour générer les QR codes.
-- [ ] Créer la classe principale `Main` avec la méthode `main()`.
+- [X] Créer la classe principale `Main` avec la méthode `main()`.
 
 ### 3.2. Récupération des patients
 
-- [ ] Créer une classe `PatientApiClient`.
-- [ ] Configurer l'URL de l'API Spring Boot.
-- [ ] Appeler l'endpoint `GET /api/patients`.
-- [ ] Récupérer la réponse JSON.
-- [ ] Convertir le JSON en objets `Patient`.
-- [ ] Parcourir tous les patients récupérés.
+- [X] Créer une classe `PatientApiClient`.
+- [X] Configurer l'URL de l'API Spring Boot.
+- [X] Appeler l'endpoint `GET /api/patients`.
+- [X] Récupérer la réponse JSON.
+- [X] Convertir le JSON en objets `Patient`.
+- [X] Parcourir tous les patients récupérés.
+
+Explication: 
+
+HttpClient	Permet d'envoyer des requêtes HTTP
+HttpRequest	Représente la requête GET
+HttpResponse	Contient la réponse du serveur
+response.body()	Récupère le JSON
+ObjectMapper	Convertit le JSON en objets Java
+List<Patient></patient>	Contient tous les patients récupérés
 
 ### 3.3. Création du générateur QR code
 
-- [ ] Créer une classe `QRCodeGenerator`.
-- [ ] Récupérer l'identifiant de chaque patient.
-- [ ] Construire dynamiquement une URL pour chaque patient.
-- [ ] Générer un QR code à partir de cette URL.
-- [ ] Convertir le QR code au format JPEG.
+- [X] Créer une classe `QRCodeGenerator`.
+- [X] Récupérer l'identifiant de chaque patient dans Main.java.
+- [X] Construire dynamiquement une URL pour chaque patient.
+- [X] Générer un QR code à partir de cette URL.
+- [X] Convertir le QR code au format JPEG.
 
 À ce stade, l'URL peut être une URL temporaire de test. Le véritable pointage vers PHP sera développé au Sprint 2.
 
@@ -136,19 +148,20 @@ Exemple :
 
 ### 4.2. Enregistrement des images
 
-- [ ] Créer le répertoire principal `cdn/patient`.
-- [ ] Créer un sous-répertoire pour chaque identifiant patient.
-- [ ] Enregistrer le QR code JPEG dans le répertoire correspondant.
-- [ ] Vérifier si le QR code existe déjà avant de le générer.
-- [ ] Éviter de régénérer inutilement les QR codes existants.
-- [ ] Vérifier que les images sont correctement enregistrées.
+- [X] Créer le répertoire principal `cdn/patient`.
+- [X] Créer un sous-répertoire pour chaque identifiant patient.
+- [X] Enregistrer le QR code JPEG dans le répertoire correspondant.
+- [X] Vérifier si le QR code existe déjà avant de le générer.
+- [X] Éviter de régénérer inutilement les QR codes existants.
+- [X] Vérifier que les images sont correctement enregistrées.
 
 ### 4.3. Configuration du CDN
 
-- [ ] Configurer un serveur HTTP pour rendre les images accessibles.
-- [ ] Définir le chemin public des images.
-- [ ] Vérifier qu'un navigateur peut afficher les QR codes.
-- [ ] Vérifier que les fichiers JPEG sont accessibles.
+- [X] Configurer un serveur HTTP pour rendre les images accessibles: 
+  sudo ln -s "$(pwd)/cdn" /opt/lampp/htdocs/cdn
+- [X] Définir le chemin public des images.
+- [X] Vérifier qu'un navigateur peut afficher les QR codes.
+- [X] Vérifier que les fichiers JPEG sont accessibles.
 
 ## 5. Automatisation du programme autonome
 

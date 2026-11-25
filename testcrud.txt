@@ -29,7 +29,7 @@ curl -X PUT http://localhost:8080/api/patients/4 \
 }'
 
 E. Supprimer un patient (DELETE)
-curl -i -X DELETE http://localhost:8080/api/patients/5
+curl -i -X DELETE http://localhost:8080/api/patients/7
 
 curl -i http://localhost:8080/api/patients/999
 curl -i http://localhost:8080/api/inconnue
